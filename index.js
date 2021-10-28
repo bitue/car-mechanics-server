@@ -74,7 +74,7 @@ async function run() {
             res.send(cursor)
         })
 
-        app.get('/car', (req, res)=> {
+        app.get('/car', async(req, res)=> {
             res.send('car mechanics')
         })
 
