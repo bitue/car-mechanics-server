@@ -74,6 +74,10 @@ async function run() {
             res.send(cursor)
         })
 
+        app.get('/car', (req, res)=> {
+            res.send('car mechanics')
+        })
+
 
 
         app.put('/update/:id', async (req, res) => {
