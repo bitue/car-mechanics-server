@@ -5,7 +5,7 @@ const cors = require('cors')
 
 const ObjectId = require('mongodb').ObjectId
 
-const port = 5000;
+const port =process.env.PORT || 5000;
 //middle were 
 app.use(cors())
 app.use(express.json())
@@ -24,6 +24,22 @@ async function run() {
         const servicesCollection = services.collection('servisce-collection');
 
 
+        // app.get('/service-col', async (req, res) => {
+
+        //     const docs = [
+        //         { name: "cake", healthy: false },
+        //         { name: "lettuce", healthy: true },
+        //         { name: "donut", healthy: false }
+        //     ];
+
+        //     const result = await servicesCollection.insertMany(docs);
+
+        //     res.send(result)
+
+        // })
+
+
+
 
         app.post('/services', async (req, res) => {
             console.log('hitting')
@@ -35,6 +51,10 @@ async function run() {
 
             res.send(result)
         })
+
+        // get all data api 
+
+
 
         // create all service api
 
