@@ -74,9 +74,7 @@ async function run() {
             res.send(cursor)
         })
 
-        app.get('/car', async(req, res)=> {
-            res.send('car mechanics')
-        })
+     
 
 
 
@@ -106,6 +104,10 @@ run().catch(console.dir)
 
 app.get('/', (req, res) => {
     res.send('car mechanics main root server ............')
+})
+
+app.get('/car', async(req, res)=> {
+    res.send('car mechanics')
 })
 
 app.listen(port, () => {
